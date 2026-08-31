@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="大提顿与黄石六日自驾徒步地图行程。" />
+    <title>大提顿・黄石｜6 日地图行程</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">RIDGE &amp; GEYSER <small>大提顿・黄石</small></a>
+      <a class="road-link" href="https://www.nps.gov/yell/planyourvisit/parkroads.htm" target="_blank" rel="noopener">出发前查 NPS 路况 ↗</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">6 days · self-drive + hike</p>
+          <h1>大提顿・黄石<br /><em>地图行程</em></h1>
+          <p>Jackson 入出，先住 Jackson 2 晚，再住 West Yellowstone 3 晚。每天一条顺路路线，一张看得懂的图。</p>
+        </div>
+        <div class="overview-map map-surface real-map" id="map-overview" data-route="overview" aria-label="可交互的六日总体路线地图">
+          <span class="map-loading">正在加载真实路线地图…</span>
+        </div>
+      </section>
+
+      <section class="base-strip" aria-label="住宿安排">
+        <div><strong>Day 1–2</strong><span>Jackson 住宿</span></div>
+        <div><strong>Day 3–5</strong><span>West Yellowstone 住宿</span></div>
+        <div><strong>Day 6</strong><span>West Yellowstone → BZN</span></div>
+      </section>
+
+      <section class="itinerary" id="itinerary">
+        <div class="section-head">
+          <div><p class="eyebrow">Daily route</p><h2>每天一条路线</h2></div>
+          <p>车程为不含停车、车流与施工延误的约数。</p>
+        </div>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>01</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">JAC → Jackson</p><h3>抵达，不赶路</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=Jackson+Hole+Airport&destination=Jackson%2C+WY&travelmode=driving" target="_blank" rel="noopener">打开导航 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-1" data-route="day-1" aria-label="Day 1 JAC 到 Jackson 路线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops"><li><time>傍晚</time><div><strong>Jackson Hole Airport</strong><p>取车后开往 Jackson 镇，约 15–20 分钟。</p></div></li><li><time>夜间</time><div><strong>Jackson</strong><p>入住、补给，留足次日早出发时间。</p></div></li></ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>02</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">Jackson → Grand Teton → Jackson</p><h3>山峰与湖岸</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=Jackson%2C+WY&destination=Jackson%2C+WY&waypoints=Mormon+Row%7CString+Lake+Trailhead%7CJenny+Lake+Overlook&travelmode=driving" target="_blank" rel="noopener">打开导航 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-2" data-route="day-2" aria-label="Day 2 大提顿路线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops">
+                <li><time>07:00</time><div><strong>Mormon Row</strong><p>晨光下观看提顿主峰的经典取景点。<a href="https://www.nps.gov/grte/planyourvisit/mormonrow.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>上午</time><div><strong>String Lake Loop</strong><p>约 6 km，爬升很少；湖岸、林地与提顿视角集中，且与 Jenny Lake 同线。<a href="https://www.nps.gov/grte/planyourvisit/stringleighplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>午后</time><div><strong>Jenny Lake</strong><p>沿湖观景；若船运与步道开放，可从西岸码头短走至 Hidden Falls。<a href="https://www.nps.gov/grte/planyourvisit/jennylakeplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>傍晚</time><div><strong>返回 Jackson</strong><p>园内移动约 1.5–2.5 小时；夜宿 Jackson。</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>03</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">Jackson → South Entrance → West Yellowstone</p><h3>南门进园，向西住宿</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=Jackson%2C+WY&destination=West+Yellowstone%2C+MT&waypoints=Yellowstone+South+Entrance%7CWest+Thumb+Geyser+Basin%7COld+Faithful%7CMidway+Geyser+Basin&travelmode=driving" target="_blank" rel="noopener">打开导航 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-3" data-route="day-3" aria-label="Day 3 黄石南门至西黄石路线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops">
+                <li><time>07:00</time><div><strong>Jackson → 黄石南门</strong><p>连续驾驶约 1.5–2 小时；南门及园路开放时才适用本路线。</p></div></li>
+                <li><time>上午</time><div><strong>West Thumb Geyser Basin</strong><p>湖畔地热木栈道，约 1 km、基本平缓。<a href="https://www.nps.gov/yell/planyourvisit/lakeplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>午后</time><div><strong>Old Faithful / Upper Geyser Basin</strong><p>根据预测喷发时间走附近木栈道；这里聚集了大量间歇泉。<a href="https://www.nps.gov/yell/planyourvisit/exploreoldfaithful.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>傍晚</time><div><strong>Midway → West Yellowstone</strong><p>近距离木栈道观看 Grand Prismatic；纯驾驶总计约 3.5–4.5 小时。<a href="https://www.nps.gov/yell/planyourvisit/placestogo.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>04</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">West Yellowstone → Norris → Canyon → West Yellowstone</p><h3>峡谷与瀑布</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=West+Yellowstone%2C+MT&destination=West+Yellowstone%2C+MT&waypoints=Norris+Geyser+Basin%7CGrand+Canyon+of+the+Yellowstone%7CArtist+Point&travelmode=driving" target="_blank" rel="noopener">打开导航 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-4" data-route="day-4" aria-label="Day 4 Norris 和峡谷路线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops">
+                <li><time>上午</time><div><strong>Norris Geyser Basin</strong><p>黄石最热、最动态的地热区之一，只在指定栈道活动。<a href="https://www.nps.gov/yell/planyourvisit/norrisplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>午后</time><div><strong>Grand Canyon of the Yellowstone</strong><p>南缘看 Artist Point 与瀑布观景点；Upper Falls 109 英尺、Lower Falls 308 英尺。<a href="https://www.nps.gov/yell/planyourvisit/canyonplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>可选步行</time><div><strong>Brink of Lower Falls</strong><p>约 1.1 km、回程爬升约 180 m；短但陡，不适合膝盖不适者。<a href="https://www.nps.gov/yell/planyourvisit/canyonplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>傍晚</time><div><strong>Norris → West Yellowstone</strong><p>经 Norris 原路返回；纯驾驶约 3–4 小时。</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>05</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">West Yellowstone → Midway → Old Faithful → West Yellowstone</p><h3>地热南线</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=West+Yellowstone%2C+MT&destination=West+Yellowstone%2C+MT&waypoints=Fountain+Paint+Pot%7CFairy+Falls+Trailhead%7COld+Faithful&travelmode=driving" target="_blank" rel="noopener">打开导航 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-5" data-route="day-5" aria-label="Day 5 黄石地热南线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops">
+                <li><time>上午</time><div><strong>Fountain Paint Pot</strong><p>短木栈道集中展示泥浆锅、喷气孔与温泉。<a href="https://www.nps.gov/yell/planyourvisit/madisonplan.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>上午</time><div><strong>Grand Prismatic Overlook</strong><p>从 Fairy Falls Trailhead 往返约 2 km、爬升约 32 m；俯瞰大棱镜温泉。<a href="https://www.nps.gov/yell/planyourvisit/placestogo.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>午后</time><div><strong>Upper Geyser Basin</strong><p>Old Faithful 至 Morning Glory 一带按体力在木栈道上往返，约 5–8 km、爬升很少。<a href="https://www.nps.gov/yell/planyourvisit/exploreoldfaithful.htm" target="_blank" rel="noopener">NPS ↗</a></p></div></li>
+                <li><time>傍晚</time><div><strong>返回 West Yellowstone</strong><p>沿南线北返；纯驾驶约 2–3 小时。</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <div class="day-number"><span>DAY</span><strong>06</strong></div>
+          <div class="day-content">
+            <div class="day-heading"><div><p class="place">West Yellowstone → Bozeman Yellowstone International Airport</p><h3>返程留足缓冲</h3></div><a href="https://www.google.com/maps/dir/?api=1&origin=West+Yellowstone%2C+MT&destination=Bozeman+Yellowstone+International+Airport&travelmode=driving" target="_blank" rel="noopener">在 Google Maps 打开 ↗</a></div>
+            <div class="day-grid">
+              <div class="route-map real-map" id="map-day-6" data-route="day-6" aria-label="Day 6 西黄石至 Bozeman Airport 路线地图"><span class="map-loading">正在加载真实路线地图…</span></div>
+              <ol class="stops"><li><time>10:30 前</time><div><strong>West Yellowstone 出发</strong><p>以 16:00 BZN 航班为准，建议最迟 10:30 出发；不要再深入公园。</p></div></li><li><time>中午</time><div><strong>US-191 → BZN</strong><p>常规约 145 km、约 1 小时 45 分钟；山路、施工或天气可能拉长时间。<a href="https://www.511mt.net/" target="_blank" rel="noopener">MT 511 路况 ↗</a></p></div></li><li><time>13:00 前后</time><div><strong>BZN 还车与乘机</strong><p>预留约 2 小时以上办理还车与安检；以航司、租车公司和当日道路信息为准。</p></div></li></ol>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="essential">
+        <p><strong>季节提醒：</strong>黄石园路及 MT-191 可能受季节、天气或施工影响；每天出发前查看 <a href="https://www.nps.gov/yell/planyourvisit/parkroads.htm" target="_blank" rel="noopener">黄石 NPS 路况 ↗</a> 和 <a href="https://www.511mt.net/" target="_blank" rel="noopener">MT 511 ↗</a>。</p>
+      </section>
+    </main>
+
+    <footer><span>底图 © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> · 路线 © <a href="https://project-osrm.org/" target="_blank" rel="noopener">OSRM</a></span><span>规划数据为约数，请以当日 NPS / MT 511 公告为准</span></footer>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

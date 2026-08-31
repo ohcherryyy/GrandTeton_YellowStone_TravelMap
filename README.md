@@ -1,1 +1,9 @@
-# GrandTeton_YellowStone_TravelMap
+大提顿・黄石行程网站
+
+无需安装依赖。直接用浏览器打开 index.html 即可查看；也可以在项目根目录运行任意静态文件服务器，例如：
+
+python -m http.server 8000
+
+随后访问 http://localhost:8000。
+
+这是地图优先的单页行程。页面使用 Leaflet + OpenStreetMap 提供可拖拽、缩放的真实底图，并通过 OSRM 加载道路路线；使用时需要网络连接。每一天都有真实路线地图、时间表、Google Maps 导航链接和相应的 NPS 资料链接。页面中的时间、距离与爬升为规划估算，出发前及每天早晨须核对 NPS 实时道路与步道状态。
